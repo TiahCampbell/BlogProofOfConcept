@@ -6,6 +6,7 @@ using blog_template_practice.Models;
 using blog_template_practice.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace blog_template_practice.Controllers
 {
     public class ContentController : Controller
@@ -17,5 +18,16 @@ namespace blog_template_practice.Controllers
             this.contentRepo = contentRepo;
         }
 
+        public ViewResult Index()
+        {
+            var contentList = contentRepo.GetAll();
+            return View(contentList);
+        }
+
+        public ViewResult Details(int id)
+        {
+            var content = contentRepo.GetById(id);
+            return View(content);
+        }
     }
 }
