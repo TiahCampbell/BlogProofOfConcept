@@ -25,12 +25,39 @@ namespace blog_template_practice
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Add seed data for Category model:
-            //modelBuilder.Entity<Category>().HasData(
-            //    );
+            modelBuilder.Entity<Category>().HasData(
+                new Category()
+                {
 
-            // Add seed data for Content model:
-            //modelBuilder.Entity<Content>().HasData(
-            //    );
+                },
+                new Category()
+                {
+
+                },
+                new Category()
+                {
+
+                },
+                new Category()
+                {
+
+                }
+                );
+
+            modelBuilder.Entity<Content>().HasData(
+                new Content()
+                {
+
+                },
+                new Content()
+                {
+
+                },
+                new Content()
+                {
+
+                }
+                );
 
             base.OnModelCreating(modelBuilder);
         }
