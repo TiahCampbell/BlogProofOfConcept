@@ -100,37 +100,37 @@ namespace blog_template_practice
                 new Color()
                 {
                     Id = 1,
-                    Name = "Blue",
+                    Name = "Blue.css",
                 },
                 new Color()
                 {
                     Id = 2,
-                    Name = "Green",
+                    Name = "Green.css",
                 },
                 new Color()
                 {
                     Id = 3,
-                    Name = "Yellow",
+                    Name = "Yellow.css",
                 },
                 new Color()
                 {
                     Id = 4,
-                    Name = "Orange",
+                    Name = "Orange.css",
                 },
                 new Color()
                 {
                     Id = 5,
-                    Name = "Red",
+                    Name = "Red.css",
                 },
                 new Color()
                 {
                     Id = 6,
-                    Name = "Pink",
+                    Name = "Pink.css",
                 },
                 new Color()
                 {
                     Id = 7,
-                    Name = "Purple",
+                    Name = "Purple.css",
                 }
                 );
 

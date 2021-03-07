@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace blog_template_practice.Models
 {
@@ -13,8 +14,10 @@ namespace blog_template_practice.Models
         public string Author { get; set; }
         public string PublishDate { get; set; }
         public string Image { get; set; }
+        [Display(Name = "Category")]
         public int CategoryId { get; set; }
         public virtual Category category { get; set; }
+        [Display(Name = "Color")]
         public int ColorId { get; set; }
         public virtual Color color { get; set; }
 
