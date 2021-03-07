@@ -1,7 +1,29 @@
-﻿
+﻿@model IEnumerable<blog_template_practice.Models.Category>
 @{
-    Layout = null; 
+    Layout = null;
 }
 
-<h1>Index</h1>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Styles/Index.css" rel="stylesheet" type="text/css" />
+    <title>Posts by Category</title>
+</head>
+
+<body>
+    <h1>Blog Post Categories</h1>
+
+    <section class="Categories">
+        @foreach (var category in Model)
+        {
+            <ul>
+                <a href="/Category/Details/@category.Id"><img src="~/@category.Image" alt="Category Photo" style="width:100%;height:100%;">@category.Name</a>
+            </ul>
+        }
+    </section>
+
+</body>
+</html>
 

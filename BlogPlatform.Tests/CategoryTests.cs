@@ -12,7 +12,7 @@ namespace blog_template_practice.Tests
 
         public CategoryTests()
         {
-            sut = new Category(1, "Category name");
+            sut = new Category(1, "Category name", "");
         }
 
         [Fact]

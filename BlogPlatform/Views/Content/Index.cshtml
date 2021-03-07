@@ -1,7 +1,29 @@
-﻿
+﻿@model IEnumerable<blog_template_practice.Models.Content>
 @{
-    Layout = null; 
+    Layout = null;
 }
 
-<h1>Index</h1>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Styles/Index.css" rel="stylesheet" type="text/css" />
+    <title>Blog Posts</title>
+</head>
+
+<body>
+    <h1>Blog Posts</h1>
+
+    <section class="Contents">
+        @foreach (var content in Model)
+        {
+            <ul>
+                <a href="/Content/Details/@content.Id"><img src="~/@content.Image" alt="Content Photo" style="width:100%;height:100%;">@content.Title</a>
+            </ul>
+        }
+    </section>
+
+</body>
+</html>
 
