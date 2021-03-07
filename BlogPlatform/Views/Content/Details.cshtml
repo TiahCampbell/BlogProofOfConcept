@@ -1,0 +1,32 @@
+﻿@model blog_template_practice.Models.Content
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Styles/@Model.color.Name" rel="stylesheet" type="text/css" />
+    <title>@Model.Title</title>
+</head>
+
+<body>
+    <h1>@Model.category.Name: @Model.Title</h1>
+
+    <section class="Content">
+        By: @Model.Author
+        @Model.PublishDate
+        <img src="~/@Model.Image" alt="Content Photo" style="width:25%;height:25%;">
+        <p>@Model.Body</p>
+    </section>
+
+
+    <nav>
+        <a href="/Content/Index">All Blog Posts</a>
+        <a href="/Category/Index/"> Categories </a>
+    </nav>
+</body>
+</html>

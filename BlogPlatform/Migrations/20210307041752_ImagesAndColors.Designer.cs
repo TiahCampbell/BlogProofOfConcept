@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using blog_template_practice;
 
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20210307041752_ImagesAndColors")]
+    partial class ImagesAndColors
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -80,37 +82,37 @@ namespace BlogPlatform.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Blue.css"
+                            Name = "Blue"
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Green.css"
+                            Name = "Green"
                         },
                         new
                         {
                             Id = 3,
-                            Name = "Yellow.css"
+                            Name = "Yellow"
                         },
                         new
                         {
                             Id = 4,
-                            Name = "Orange.css"
+                            Name = "Orange"
                         },
                         new
                         {
                             Id = 5,
-                            Name = "Red.css"
+                            Name = "Red"
                         },
                         new
                         {
                             Id = 6,
-                            Name = "Pink.css"
+                            Name = "Pink"
                         },
                         new
                         {
                             Id = 7,
-                            Name = "Purple.css"
+                            Name = "Purple"
                         });
                 });
 

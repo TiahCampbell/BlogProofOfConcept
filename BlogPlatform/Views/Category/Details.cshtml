@@ -1,0 +1,34 @@
+﻿@model blog_template_practice.Models.Category
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Styles/Details.css" rel="stylesheet" type="text/css" />
+    <title>@Model.Name</title>
+</head>
+
+<body>
+    <h1> @Model.Name Blog Posts </h1>
+    
+    <section class="Loop">
+        @foreach (var content in @Model.Contents)
+        {
+        <section class="Contents">
+            <a href="/Content/Details/@content.Id"><img src="~/@content.Image" alt="Content Photo" style="width:25%;height:25%;">@content.Title</a>
+        </section>
+        }
+    </section>
+
+
+    <nav>
+        <a href="/Content/Index">All Blog Posts</a>
+        <a href="/Category/Index/"> Categories </a>
+    </nav>
+</body>
+</html>
