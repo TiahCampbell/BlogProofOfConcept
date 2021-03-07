@@ -29,5 +29,81 @@ namespace blog_template_practice.Controllers
             var content = contentRepo.GetById(id);
             return View(content);
         }
+        public ViewResult Create()
+        {
+            var colors = contentRepo.PopulateColorList();
+            var categories = contentRepo.PopulateCategoryList();
+
+            ViewBag.Colors = colors;
+            ViewBag.Categories = categories;
+
+            return View(new Content());
+        }
+
+        [HttpPost]
+        public ViewResult Create(Content model)
+        {
+            var colors = contentRepo.PopulateColorList();
+            var categories = contentRepo.PopulateCategoryList();
+
+            ViewBag.Colors = colors;
+            ViewBag.Categories = categories;
+
+            if (contentRepo.GetContentByTitle(model.Title) == null)
+            {
+                contentRepo.Create(model);
+                ViewBag.Result = "You have successfully created this blog post!";
+            }
+            else
+            {
+                ViewBag.Error = "That title already exists and cannot be added.";
+            }
+
+            ModelState.Clear();
+
+            //return View(model);
+            return View(); // return blank course once saved
+            //return RedirectToAction("Update", new { id = model.Id }); // redirect to Update
+        }
+
+        
+        public ViewResult Update(int id)
+        {
+            var colors = contentRepo.PopulateColorList();
+            var categories = contentRepo.PopulateCategoryList();
+
+            ViewBag.Colors = colors;
+            ViewBag.Categories = categories;
+
+            var content = contentRepo.GetById(id);
+            
+
+            return View(content);
+        }
+
+        [HttpPost]
+        public ViewResult Update(Content model)
+        {
+
+            var colors = contentRepo.PopulateColorList();
+            var categories = contentRepo.PopulateCategoryList();
+
+            ViewBag.Colors = colors;
+            ViewBag.Categories = categories;
+
+            contentRepo.Update(model);
+            ViewBag.Result = "You have successfully updated this blog post!";
+
+            return View(model);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var content = contentRepo.GetById(id);
+
+            contentRepo.Delete(content);
+
+            return RedirectToAction("Index");
+        }
     }
 }

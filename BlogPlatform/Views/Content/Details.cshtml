@@ -21,12 +21,15 @@
         @Model.PublishDate
         <img src="~/@Model.Image" alt="Content Photo" style="width:25%;height:25%;">
         <p>@Model.Body</p>
+        <a href="/Content/Update/@Model.Id">Edit</a>
+        <a href="/Content/Delete/@Model.Id">Delete</a>
     </section>
 
 
     <nav>
         <a href="/Content/Index">All Blog Posts</a>
-        <a href="/Category/Index/"> Categories </a>
+        <a href="/Category/Index/">Categories</a>
+        <a href="/Content/Create/">New Blog Post</a>
     </nav>
 </body>
 </html>
