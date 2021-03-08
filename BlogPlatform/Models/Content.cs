@@ -12,12 +12,13 @@ namespace blog_template_practice.Models
         public string Title { get; set; }
         public string Body { get; set; }
         public string Author { get; set; }
-        public string PublishDate { get; set; }
-        public string Image { get; set; }
+        [Display(Name = "Posted on:")]
+        public string PublishDate { get; set; } = Convert.ToString(DateTime.Now);
+        public string Image { get; set; } = "Images/Default.jpg";
         [Display(Name = "Category")]
         public int CategoryId { get; set; }
         public virtual Category category { get; set; }
-        [Display(Name = "Color")]
+        [Display(Name = "Color Theme")]
         public int ColorId { get; set; }
         public virtual Color color { get; set; }
 
