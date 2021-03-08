@@ -61,12 +61,21 @@ namespace blog_template_practice.Controllers
 
             ModelState.Clear();
 
-            //return View(model);
-            return View(); // return blank course once saved
-            //return RedirectToAction("Update", new { id = model.Id }); // redirect to Update
+            return View();
         }
 
-        
+        public ViewResult CreateByCategoryId(int id)
+        {
+            var colors = contentRepo.PopulateColorList();
+            var categories = contentRepo.PopulateCategoryList();
+
+            ViewBag.Colors = colors;
+            ViewBag.Categories = categories;
+
+
+            return View(new Content() { CategoryId = id });
+        }
+
         public ViewResult Update(int id)
         {
             var colors = contentRepo.PopulateColorList();
@@ -76,7 +85,7 @@ namespace blog_template_practice.Controllers
             ViewBag.Categories = categories;
 
             var content = contentRepo.GetById(id);
-            
+
 
             return View(content);
         }
@@ -96,12 +105,17 @@ namespace blog_template_practice.Controllers
 
             return View(model);
         }
-
-        public ActionResult Delete(int id)
+        public ViewResult Delete(int id)
         {
             var content = contentRepo.GetById(id);
-
-            contentRepo.Delete(content);
+            
+            return View(content);
+        }
+        [HttpPost]
+        public ActionResult Delete(Content model)
+        {
+            
+            contentRepo.Delete(model);
 
             return RedirectToAction("Index");
         }
