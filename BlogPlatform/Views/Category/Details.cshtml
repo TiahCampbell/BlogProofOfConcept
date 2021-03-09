@@ -21,9 +21,19 @@
         <section class="Index">
             @foreach (var content in @Model.Contents)
             {
-                <div class="Content">
-                    <a href="/Content/Details/@content.Id"><img src="~/@content.Image" alt="Content Photo"></a>
-                </div>
+                    <a href="/Content/Details/@content.Id">
+                        <div class="Content">
+                            <img src="~/@content.Image" alt="Content Photo">
+                            <br>
+                            <div class="Details">
+                                <h1>@content.Title</h1>
+                                <br>
+                                <h3>By: @content.Author</h3>
+                                <br>
+                                <h4>Posted On:@content.PublishDate</h4>
+                            </div>
+                        </div>
+                    </a>
             }
         </section>
 
