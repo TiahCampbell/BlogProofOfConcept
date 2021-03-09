@@ -1,2 +1,68 @@
-﻿body {
+﻿* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.618em;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    margin-top: 2.5em;
+    background: url(../Images/SolidPaper.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+container {
+    background: rgba(65, 66, 66, 0.507);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.Content {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background-color: rgba(65, 66, 66, 0.507);
+}
+
+nav a {
+        padding: .5em 2em;
+        text-decoration: none;
+        color: ivory;
+}
+
+footer {
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    align-self: flex-end;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    color: ivory;
+    padding: 1em 0;
+    text-align: center;
+    padding-left: 20em;
 }

@@ -8,27 +8,32 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link href="~/Styles/Index.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/Details.css" rel="stylesheet" type="text/css" />
     <title>Blog Posts</title>
 </head>
+<container>
+    <body>
+        <header>
+            <h1>Blog Posts</h1>
+        </header>
+        <section class="Index">
+            @foreach (var content in Model)
+            {
+            <div class="Content">
+                <a href="/Content/Details/@content.Id"><img src="~/@content.Image" alt="Content Photo"></a>
+            </div>
+            }
+        </section>
 
-<body>
-    <h1>Blog Posts</h1>
-
-    <section class="Contents">
-        @foreach (var content in Model)
-        {
-            <ul>
-                <a href="/Content/Details/@content.Id"><img src="~/@content.Image" alt="Content Photo" style="width:25%;height:25%;">@content.Title</a>
-            </ul>
-        }
-    </section>
-
-    <nav>
-        <a href="/Content/Index">All Blog Posts</a>
-        <a href="/Category/Index/"> Categories </a>
-        <a href="/Content/Create/"> New Blog Post </a>
-    </nav>
-</body>
+        <nav>
+            <a href="/Content/Index">All Blog Posts</a>
+            <a href="/Category/Index/"> Categories </a>
+            <a href="/Content/Create/"> New Blog Post </a>
+        </nav>
+        <footer>
+            &copy; 2021 Tiah Campbell
+        </footer>
+    </body>
+</container>
 </html>
 
