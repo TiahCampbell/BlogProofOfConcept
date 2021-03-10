@@ -12,22 +12,28 @@
     <title>Posts by Category</title>
 </head>
 
-<body>
-    <h1>Blog Post Categories</h1>
-
-    <section class="Categories">
-        @foreach (var category in Model)
-        {
-            <ul>
-                <a href="/Category/Details/@category.Id"><img src="~/@category.Image" alt="Category Photo" style="width:25%;height:25%;">@category.Name</a>
-            </ul>
-        }
-    </section>
-    <nav>
-        <a href="/Content/Index">All Blog Posts</a>
-        <a href="/Category/Index/"> Categories </a>
-        <a href="/Content/Create/"> New Blog Post </a>
-    </nav>
-</body>
+<container>
+    <body>
+        <header>
+            <h1>Blog Post Categories</h1>
+        </header>
+        <section class="Index">
+            @foreach (var category in Model)
+            {
+            <div class="Content">
+                <a href="/Category/Details/@category.Id"><img src="~/@category.Image" alt="Category Photo"></a>
+            </div>
+            }
+        </section>
+        <nav>
+            <a href="/Content/Index">All Blog Posts</a>
+            <a href="/Category/Index/"> Categories </a>
+            <a href="/Content/Create/"> New Blog Post </a>
+        </nav>
+        <footer>
+            &copy; 2021 Tiah Campbell
+        </footer>
+    </body>
+</container>
 </html>
 

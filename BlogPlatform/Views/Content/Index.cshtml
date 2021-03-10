@@ -8,27 +8,50 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link href="~/Styles/Index.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/Details.css" rel="stylesheet" type="text/css" />
     <title>Blog Posts</title>
 </head>
+<container>
+    <body>
+        <header>
+            <h1>Blog Posts</h1>
+        </header>
+        <section class="Index">
+            @foreach (var content in Model)
+            {
+            <a href="/Content/Details/@content.Id">
+                <div class="Content">
+                    <img src="~/@content.Image" alt="Content Photo">
+                    <br>
+                    <div class="Details">
+                        <h1>@content.Title</h1>
+                        <br>
+                        <h3>
+                            By: 
+                            <br>
+                            @content.Author
+                        </h3>
+                        <br>
+                        <h4>
+                            Posted On:
+                            <br>
+                            @content.PublishDate
+                        </h4>
+                    </div>
+                </div>
+</a>
+            }
+        </section>
 
-<body>
-    <h1>Blog Posts</h1>
-
-    <section class="Contents">
-        @foreach (var content in Model)
-        {
-            <ul>
-                <a href="/Content/Details/@content.Id"><img src="~/@content.Image" alt="Content Photo" style="width:25%;height:25%;">@content.Title</a>
-            </ul>
-        }
-    </section>
-
-    <nav>
-        <a href="/Content/Index">All Blog Posts</a>
-        <a href="/Category/Index/"> Categories </a>
-        <a href="/Content/Create/"> New Blog Post </a>
-    </nav>
-</body>
+        <nav>
+            <a href="/Content/Index">All Blog Posts</a>
+            <a href="/Category/Index/"> Categories </a>
+            <a href="/Content/Create/"> New Blog Post </a>
+        </nav>
+        <footer>
+            &copy; 2021 Tiah Campbell
+        </footer>
+    </body>
+</container>
 </html>
 

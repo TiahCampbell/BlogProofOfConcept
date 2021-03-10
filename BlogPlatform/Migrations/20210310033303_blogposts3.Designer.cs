@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using blog_template_practice;
 
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20210310033303_blogposts3")]
+    partial class blogposts3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -159,7 +161,7 @@ namespace BlogPlatform.Migrations
                             CategoryId = 1,
                             ColorId = 1,
                             Image = "Images/Strong.jpg",
-                            PublishDate = "3/2/2021 05:35:21 PM",
+                            PublishDate = "3/2/21",
                             Title = "Strong"
                         },
                         new
@@ -170,7 +172,7 @@ namespace BlogPlatform.Migrations
                             CategoryId = 2,
                             ColorId = 2,
                             Image = "Images/MealPrep.jpg",
-                            PublishDate = "3/3/2021 04:22:32 PM",
+                            PublishDate = "3/3/21",
                             Title = "Meal Prep"
                         },
                         new
@@ -181,7 +183,7 @@ namespace BlogPlatform.Migrations
                             CategoryId = 3,
                             ColorId = 5,
                             Image = "Images/Thief.jpg",
-                            PublishDate = "3/5/2021 06:12:02 PM",
+                            PublishDate = "03/05/21",
                             Title = "Thief"
                         },
                         new
@@ -192,18 +194,17 @@ namespace BlogPlatform.Migrations
                             CategoryId = 4,
                             ColorId = 4,
                             Image = "Images/Crawling.jpg",
-                            PublishDate = "3/4/2021 08:42:55 PM",
+                            PublishDate = "3/4/21",
                             Title = "Crawling"
                         },
                         new
                         {
                             Id = 5,
-                            Author = "Teacup",
                             Body = "It's been a few years since my husband and I ran the Spartan Sprint in 2018 with my students. It was a blast and an experience to remember. Climbing, running, mud pits, and coaching my students through that fear of heights! Even though we got pulled off the course for a freak lightning storm, we stuck it out and got back out there after the storm cleared. Jumping that fire was an awesome moment! Giving my body the time to heal and working to get back to where I was before baby. But my goal is to run another one in 2022. I can't wait!",
                             CategoryId = 1,
                             ColorId = 6,
                             Image = "Images/Spartan2.jpg",
-                            PublishDate = "3/6/2021 06:11:22 PM",
+                            PublishDate = "3/6/21",
                             Title = "Spartan"
                         },
                         new
@@ -214,7 +215,7 @@ namespace BlogPlatform.Migrations
                             CategoryId = 2,
                             ColorId = 3,
                             Image = "Images/Mango.jpg",
-                            PublishDate = "3/7/2021 11:02:43 PM",
+                            PublishDate = "3/7/21",
                             Title = "Mango"
                         },
                         new
@@ -225,7 +226,7 @@ namespace BlogPlatform.Migrations
                             CategoryId = 3,
                             ColorId = 7,
                             Image = "Images/Guitar.jpg",
-                            PublishDate = "3/9/2021 10:38:41 PM",
+                            PublishDate = "03/09/21",
                             Title = "Guitar"
                         },
                         new
@@ -236,7 +237,7 @@ namespace BlogPlatform.Migrations
                             CategoryId = 4,
                             ColorId = 1,
                             Image = "Images/Backyard.jpg",
-                            PublishDate = "3/8/2021 10:21:48 PM",
+                            PublishDate = "3/8/21",
                             Title = "Backyard"
                         });
                 });
