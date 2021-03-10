@@ -62,7 +62,7 @@ h4 {
 }
 
 img {
-    width: 100%;
+    width: 60%;
     display: flex;
     justify-content: center;
     -moz-box-shadow: 0 0 10px #000000;
@@ -76,16 +76,7 @@ img {
 p {
     display: flex;
     justify-content: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
-}
-
-.Buttons {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(158, 139, 77, 1);
-    color: ivory;
-    border: 2px solid #877726;
+    padding: 2em;
 }
 
 nav {
@@ -117,3 +108,30 @@ footer {
     text-align: center;
     padding-left: 20em;
 }
+
+.Buttons a {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 2em;
+}
+
+.button {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-image: url("../Images/Purple.png");
+    color: ivory;
+    -moz-box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
+}
+
+    .button:hover {
+        -moz-box-shadow: 0 0 20px #000000;
+        -webkit-box-shadow: 0 0 20px #000000;
+        box-shadow: 0 0 20px #000000;
+    }
+
+a {
+    text-decoration: none;
+}
+

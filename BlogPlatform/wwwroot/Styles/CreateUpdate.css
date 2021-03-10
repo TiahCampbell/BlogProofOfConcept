@@ -9,8 +9,8 @@
 html {
     font-size: 16px;
     margin-top: 2.5em;
-    background: url(../Images/SolidPaper.png) no-repeat center center fixed;
-    background-size: cover;
+    background-color: ivory;
+    background-image: url("../Images/Linen.png");
 }
 
 container {
@@ -23,16 +23,28 @@ body {
 }
 
 header {
+    color: ivory;
     margin: 0 auto;
     max-width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    display: flex;
+    align-content: center;
 }
 
 .Content {
+    padding-left: 1em;
+    padding-right: 1em;
     margin: 0 auto;
     max-width: 800px;
 }
 
 form {
+    padding-left: 1em;
+    padding-right: 1em;
     margin: 0 auto;
     max-width: 800px;
 }
@@ -64,5 +76,5 @@ footer {
     color: ivory;
     padding: 1em 0;
     text-align: center;
-    padding-left: 20em;
+    padding-left: 9em;
 }

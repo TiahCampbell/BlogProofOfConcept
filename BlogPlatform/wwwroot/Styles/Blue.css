@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: ivory;
+    
 }
 
 html {
@@ -27,6 +27,7 @@ body {
 }
 
 header {
+    color: ivory;
     margin: 0 auto;
     max-width: 800px;
     display: flex;
@@ -36,6 +37,7 @@ header {
 }
 
 h1 {
+    color: ivory;
     background: url("../Images/Blue.png");
     -moz-box-shadow: 0 0 10px #000000;
     -webkit-box-shadow: 0 0 10px #000000;
@@ -45,6 +47,7 @@ h1 {
 }
 
 .Content {
+    color: ivory;
     margin: 0 auto;
     max-width: 800px;
     display: flex;
@@ -54,6 +57,7 @@ h1 {
 }
 
 h4 {
+    color: ivory;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +66,7 @@ h4 {
 }
 
 img {
-    width: 100%;
+    width: 60%;
     display: flex;
     justify-content: center;
     -moz-box-shadow: 0 0 10px #000000;
@@ -74,19 +78,12 @@ img {
 }
 
 p {
+    color: ivory;
     display: flex;
     justify-content: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding: 2em;
 }
 
-.Buttons {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(158, 139, 77);
-    color: ivory;
-    border: 2px solid #158594;
-}
 
 nav {
     position: fixed;
@@ -117,3 +114,30 @@ footer {
     text-align: center;
     padding-left: 20em;
 }
+
+.Buttons a {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 2em;
+}
+
+.button {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-image: url("../Images/Blue.png");
+    color: ivory;
+    -moz-box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
+}
+
+.button:hover {
+    -moz-box-shadow: 0 0 20px #000000;
+    -webkit-box-shadow: 0 0 20px #000000;
+    box-shadow: 0 0 20px #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
