@@ -1,0 +1,133 @@
+﻿* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.618em;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    margin-top: 2.5em;
+    background-color: ivory;
+    background-image: url("../Images/Linen.png");
+}
+
+container {
+    background: rgba(65, 66, 66, 0.507);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    color: ivory;
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    display: flex;
+    align-content: center;
+}
+
+.Index {
+    margin: 0 auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-row-gap: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.Content {
+    
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    background-image: url("../Images/SolidPaper.png");
+    color: ivory;
+    border-radius: 20px;
+    padding: 1em;
+    -moz-box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
+}
+
+.Content:hover {
+    -moz-box-shadow: 0 0 20px #000000;
+    -webkit-box-shadow: 0 0 20px #000000;
+    box-shadow: 0 0 20px #000000;
+}
+img {
+    width: 30%;
+    border: 1px;
+    border-radius: 20px;
+    padding: 1em;
+}
+.Details {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 40px 40px 60px 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Details h1 {
+    font-size: 50px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Details h3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.Details h4 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+    
+    
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background-color: rgba(65, 66, 66, 0.507);
+}
+
+nav a {
+        padding: .5em 2em;
+        text-decoration: none;
+        color: ivory;
+}
+
+footer {
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    align-self: flex-end;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    color: ivory;
+    padding: 1em 0;
+    text-align: center;
+    padding-left: 20em;
+}

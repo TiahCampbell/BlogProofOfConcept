@@ -1,0 +1,137 @@
+﻿* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.618em;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: ivory;
+}
+
+html {
+    font-size: 16px;
+    margin-top: 2.5em;
+    background: url(../Images/Green.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+container {
+    background: url("../Images/SolidPaper.png");
+    -moz-box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+h1 {
+    background: url("../Images/Green.png");
+    -moz-box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
+    padding: 1em;
+    border-radius: 20px;
+}
+
+.Content {
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+img {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    -moz-box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
+    background-image: url("../Images/Green.png");
+    padding: 1em;
+    border-radius: 20px;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background-color: rgba(65, 66, 66, 0.507);
+}
+
+    nav a {
+        padding: .5em 2em;
+        text-decoration: none;
+        color: ivory;
+    }
+
+footer {
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    align-self: flex-end;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    color: ivory;
+    padding: 1em 0;
+    text-align: center;
+    padding-left: 20em;
+}
+
+.Buttons a {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 2em;
+}
+
+.button {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-image: url("../Images/Green.png");
+    color: ivory;
+    -moz-box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
+}
+
+.button:hover {
+    -moz-box-shadow: 0 0 20px #000000;
+    -webkit-box-shadow: 0 0 20px #000000;
+    box-shadow: 0 0 20px #000000;
+}
+
+a {
+    text-decoration: none;
+}
+

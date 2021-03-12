@@ -1,0 +1,46 @@
+﻿@model blog_template_practice.Models.Content
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Styles/@Model.color.Name" rel="stylesheet" type="text/css" />
+    <title>@Model.Title</title>
+</head>
+<container>
+    <body>
+        <header>
+            <h1>@Model.category.Name: @Model.Title</h1>
+        </header>
+        <section class="Content">
+            <h4>
+                By: @Model.Author
+                <br>
+                Posted On: @Model.PublishDate
+            </h4>
+            <img src="~/@Model.Image" alt="Content Photo">
+            <p>@Model.Body</p>
+            <div class="Buttons">
+                <a href="/Content/Update/@Model.Id"><button type="button" class="button">Edit</button></a>
+                <br>
+                <a href="/Content/Delete/@Model.Id"><button type="button" class="button">Delete</button></a>
+            </div>
+        </section>
+
+
+        <nav>
+            <a href="/Content/Index">All Blog Posts</a>
+            <a href="/Category/Index/">Categories</a>
+            <a href="/Content/Create/">New Blog Post</a>
+        </nav>
+        <footer>
+            &copy; 2021 Tiah Campbell
+        </footer>
+    </body>
+</container>
+</html>
